@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "269b160d-5736-408d-8662-2c30f6f23884",
+		"name": "testIntelcost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Providers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombres\":\"Euell\", \n\t\"apellidos\":\"Whear\",\n\t\"edad\":71, \n\t\"correo_electronico\":\"ewhear0@sourceforge.com\", \n\t\"celular\":1784514947, \n\t\"telefono\":\"8245693107\", \n\t\"registro\":\"2019-05-26 21:12:55\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/challengeIntelcost/api/CRUD/read.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"challengeIntelcost",
+						"api",
+						"CRUD",
+						"read.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Provider",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombres\":\"Euell\", \n\t\"apellidos\":\"Whear\",\n\t\"edad\":71, \n\t\"correo_electronico\":\"ewhear0@sourceforge.com\", \n\t\"celular\":1784514947, \n\t\"telefono\":\"8245693107\", \n\t\"registro\":\"2019-05-26 21:12:55\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/challengeIntelcost/api/CRUD/read_one.php?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"challengeIntelcost",
+						"api",
+						"CRUD",
+						"read_one.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Provider",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nombres\":\"Euell\", \n\t\"apellidos\":\"Whear\",\n\t\"edad\":71, \n\t\"correo_electronico\":\"ewhear0@sourceforge.com\", \n\t\"celular\":1784514947, \n\t\"telefono\":\"8245693107\", \n\t\"registro\":\"2019-05-26 21:12:55\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/challengeIntelcost/api/CRUD/update.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"challengeIntelcost",
+						"api",
+						"CRUD",
+						"update.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Provider",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/challengeIntelcost/api/CRUD/delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"challengeIntelcost",
+						"api",
+						"CRUD",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Provider",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombres\":\"Euell\", \n\t\"apellidos\":\"Whear\",\n\t\"edad\":71, \n\t\"correo_electronico\":\"ewhear5@outlook.com\", \n\t\"celular\":1784514947, \n\t\"telefono\":\"8245693107\", \n\t\"registro\":\"2019-05-26 21:12:55\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/challengeIntelcost/api/CRUD/create.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"challengeIntelcost",
+						"api",
+						"CRUD",
+						"create.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
