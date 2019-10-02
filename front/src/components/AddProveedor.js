@@ -78,6 +78,8 @@ class AddProveedor extends Component {
               value={this.state.nombres}
               onChange={this.changeValue}
               placeholder="nombres"
+              maxLength="60"
+              required
               />
           </div>
           <div className="form-group">
@@ -88,6 +90,8 @@ class AddProveedor extends Component {
               value={this.state.apellidos}
               onChange={this.changeValue}
               placeholder="apellidos"
+              maxLength="60"
+              required
               />
           </div>
           <div className="form-group">
@@ -98,6 +102,7 @@ class AddProveedor extends Component {
               value={this.state.edad}
               onChange={this.changeValue}
               placeholder="edad"
+              required
               />
           </div>
           <div className="form-group">
@@ -108,6 +113,8 @@ class AddProveedor extends Component {
               value={this.state.correo_electronico}
               onChange={this.changeValue}
               placeholder="email"
+              maxLength="120"
+              required
               />
           </div>
           <div className="form-group">
@@ -118,6 +125,9 @@ class AddProveedor extends Component {
               value={this.state.celular}
               onChange={this.changeValue}
               placeholder="celular"
+              maxLength="10"
+              minLength="10"
+              required
               />
           </div>
           <div className="form-group">
@@ -128,6 +138,7 @@ class AddProveedor extends Component {
               value={this.state.telefono}
               onChange={this.changeValue}
               placeholder="telefono"
+              maxLength="20"
               />
           </div>
           <button type="submit" onClick={this.addMe} className="btn btn-success">

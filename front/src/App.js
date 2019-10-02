@@ -38,14 +38,7 @@ export default class App extends React.Component {
       .then(res => console.log(res));
   }
   removeProveedor(pId) {
-    let provs = [];
-    var tam = this.state.proveedores.length;
-    for (var i = 0; i < tam; i++) {
-      if (this.state.proveedores[i].id !== pId) provs.push(this.state.proveedores[i]);
-    }
-    this.setState({
-      proveedores: provs
-    })
+
     fetch('/delete.php', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
@@ -53,6 +46,12 @@ export default class App extends React.Component {
     })
       .then(res => res.text()) // OR res.json()
       .then(res => console.log(res))
+    axios.get('/read.php').then(response => response.data)
+      .then((data) => {
+        this.setState({
+          proveedores: data.records
+        })
+      });
 
   }
 
