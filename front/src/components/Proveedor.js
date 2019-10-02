@@ -21,11 +21,12 @@ class Proveedor extends Component {
     this.editMe = this.editMe.bind(this);
   }
   deleteMe() {
-    this.props.remove(this.state.id)
+    this.props.remove(this.state.index,this.state.id);
   }
   editMe(prov) {
     console.log(prov)
     this.setState({
+      id:prov.id,
       nombres: prov.nombres,
       apellidos: prov.apellidos,
       edad: prov.edad,

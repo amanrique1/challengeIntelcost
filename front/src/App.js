@@ -37,21 +37,17 @@ export default class App extends React.Component {
     }).then(res => res.json())
       .then(res => console.log(res));
   }
-  removeProveedor(pId) {
+  removeProveedor(index,pId) {
 
     fetch('/delete.php', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: pId })
     })
-      .then(res => res.text()) // OR res.json()
-      .then(res => console.log(res))
-    axios.get('/read.php').then(response => response.data)
-      .then((data) => {
-        this.setState({
-          proveedores: data.records
-        })
-      });
+      const provs=Object.assign([],this.state.proveedores);
+      provs.splice(index,1);
+      console.log(provs)
+      this.setState({proveedores:provs})
 
   }
 
